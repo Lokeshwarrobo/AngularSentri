@@ -200,14 +200,14 @@
                     </div>
                 </div>
             </div>
-           <div class="all-bg-ctrl"><div class="emp-screen-view">
+           <div *ngFor = "let e of myd"  class="all-bg-ctrl"><div class="emp-screen-view">
 
       <table><tr ><td>
           <div class="display-img-div" id="displayimg" style="width: 150px;">
 
            <div class="employee-pic-emp"><img id="userImage" src="http://servicecentral.sagarsoft.com/public/media/images/default-profile-pic.jpg"></div><div id="loaderimg" style="display:none; clear:both; margin:0 auto; text-align: center; width:100%;"><img src="http://servicecentral.sagarsoft.com/public/media/images/loaderwhite_21X21.gif" style="width:21px; height: 21px; float: none; "></div></div>
       </td>
-      <td><div id="personalDetailsDiv" style="width: 1283px;"><p><b>Employee Name <i>:</i></b><span class="emp-name-span bold-text">Test User</span></p><p><b>Employee Id <i>:</i></b><span class="emp-name-span" id="spanempid">SIL-0001</span></p><p><b>Email Id <i>:</i></b><span><a href="javascript:void(0)">test.user@sagarsoft.in</a></span></p><p><b>Contact Number <i>:</i></b><span id="contactnospan">1234567890</span></p></div></td></tr></table>
+      <td><div id="personalDetailsDiv" style="width: 1283px;"><p><b>Employee Name <i>:</i></b><span class="emp-name-span bold-text">{{ e.name }}</span></p><p><b>Employee Id <i>:</i></b><span class="emp-name-span" id="spanempid"> {{ e.empid}} </span></p><p><b>Email Id <i>:</i></b><span><a href="javascript:void(0)">{{ e.email }} </a></span></p><p><b>Contact Number <i>:</i></b><span id="contactnospan">{{e.mobile }}</span></p></div></td></tr></table>
             
                    </div></div>
 
@@ -229,31 +229,31 @@
         <div class="main_view_nor">
                         <div class="main_view_sub_left">
                     <div class="width_20" style="height: 39px;"><label>Employee Id</label></div>
-                    <div class="width_80" style="height: 39px;"><label>SIL-0001</label></div>
+                    <div class="width_80" style="height: 39px;"><label></label></div>
             </div>
                                     <div class="main_view_sub_right">
                     <div class="width_20" style="height: 39px;"><label>Prefix</label></div>
-                    <div class="width_80" style="height: 39px;"><label>...</label></div>
+                    <div class="width_80" style="height: 39px;"><label> </label></div>
             </div>
                     </div>
             <div class="main_view_alt">
                         <div class="main_view_sub_left">
                     <div class="width_20" style="height: 58px;"><label>First Name</label></div>
-                    <div class="width_80" style="height: 58px;"><label>Test User</label></div>
+                    <div class="width_80" style="height: 58px;"><label> </label></div>
             </div>
                                     <div class="main_view_sub_right">
                     <div class="width_20" style="height: 58px;"><label>Last Name</label></div>
-                    <div class="width_80" style="height: 58px;"><label>Test</label></div>
+                    <div class="width_80" style="height: 58px;"><label> </label></div>
             </div>
                     </div>
             <div class="main_view_nor">
                         <div class="main_view_sub_left">
                     <div class="width_20" style="height: 58px;"><label>Date of Birth</label></div>
-                    <div class="width_80" style="height: 58px;"><label>1999-11-14</label></div>
+                    <div class="width_80" style="height: 58px;"><label></label></div>
             </div>
                                     <div class="main_view_sub_right">
                     <div class="width_20" style="height: 58px;"><label>Mode of Employment</label></div>
-                    <div class="width_80" style="height: 58px;"><label>Direct</label></div>
+                    <div class="width_80" style="height: 58px;"><label></label></div>
             </div>
                     </div>
                     
@@ -290,11 +290,11 @@
                         <div class="main_view_alt">
                         <div class="main_view_sub_left">
                     <div class="width_20" style="height: 58px;"><label>Role</label></div>
-                    <div class="width_80" style="height: 58px;"><label>Employee</label></div>
+                    <div class="width_80" style="height: 58px;"><label> </label></div>
             </div>
                                     <div class="main_view_sub_right">
                     <div class="width_20" style="height: 58px;"><label>Email</label></div>
-                    <div class="width_80" style="height: 58px;"><label>test.user@sagarsoft.in</label></div>
+                    <div class="width_80" style="height: 58px;"><label></label></div>
             </div>
                     </div>
             <div class="main_view_nor">
