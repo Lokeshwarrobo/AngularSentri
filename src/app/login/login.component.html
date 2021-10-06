@@ -1,0 +1,79 @@
+
+    
+
+<body class="fixed-header ">
+    <div id="defaultspinner" class="ajax-loader" style="display:none;" >
+      <img id="img-spinner" src="http://servicecentral.sagarsoft.com/public/media/images/loader2.gif" alt="Loading" />      
+  </div>
+    <div class="login-wrapper ">
+        
+            <div class="bg-pic">
+        
+                <img src="http://servicecentral.sagarsoft.com/public/media/images/SagarSoft-4010.jpg" alt="">
+        
+                <div class="bg-caption pull-bottom sm-pull-bottom text-white p-l-20 m-b-20">
+                    <!-- <h2 class="semi-bold text-white">FREE and Powerful Human Resource Management System.</h2> -->
+                    
+                </div>
+        
+            </div>
+        
+            
+
+
+
+  <div class="login-container bg-white">
+      <div class="p-l-50 m-l-20 p-r-50 m-r-20 p-t-50 m-t-30 sm-p-l-15 sm-p-r-15 sm-p-t-40">
+          <!-- <img src="images/logo1.png" alt="logo" height="50"> -->
+          <img src="http://servicecentral.sagarsoft.com/public/media/images/ss_logo.png" alt="logo" height="80" style="margin: 0 auto; display: block;">
+          <!-- <p class="p-t-35">Sign into use Sentrifugo</p> -->
+
+          <form id='idfrm' action="http://servicecentral.sagarsoft.com/index.php/index/loginpopupsave" method="post" class="p-t-40" role="form" >
+
+              <div class="form-group form-group-default">
+                  <label>Login</label>
+                  <div class="controls">
+                      <input type="text" name="username" id="username" maxlength="50" placeholder="Enter your username or email" tabindex="1"  class="form-control" value="">
+                  </div>
+              </div>
+              <div class="errorMsg" id="usernameerror" style="display:none"></div> 
+              <div class="form-group form-group-default">
+                  <label>Password</label>
+                  <div class="controls">
+                      <input type="password" name="password" id="password" maxlength="15" onkeydown="/*return keycodeforIE(event)*/"  placeholder="Enter your password" tabindex="2" class="form-control">
+                  </div>                  
+              </div>
+              <!-- </div> -->
+                                <div class="errorMsg" style="display:none" id="pwderror">
+                            </div>
+
+              <div class="form-group row no-gutters">
+                  <div class="col-6 no-padding">
+                       <div class="checkbox ">
+                          <input type="checkbox" name= 'rememberme' value="1" id="checkbox1" >
+                          <label for="checkbox1">Keep Me Signed in</label> 
+                      </div>
+                      
+                  </div>
+                  <div class="col-6 d-flex align-items-center justify-content-end">
+                      <a href="#" data-toggle="modal" data-target="#forgotPassword" class="text-info small">Forgot Password?</a>
+                  </div>
+              </div>
+              <button routerLink="/dashboard" class="btn btn-primary btn-cons m-t-10" value="Log In" id="loginsubmit" tabindex="-1">Sign in</button>
+
+              
+          </form>
+
+          <div class="pull-bottom sm-pull-bottom">
+              <div class="m-b-30 p-r-80 sm-m-t-20 sm-p-r-15 sm-p-b-20 clearfix">
+                  <!-- <div class="col-sm-3 col-md-2 no-padding">
+                      <img alt="" class="m-t-5 s-icon" src="images/sentrifugo_icon.png"  width="60">
+                  </div> -->
+                  
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+

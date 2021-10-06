@@ -1,0 +1,391 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="expires" content="0">
+<meta name="msapplication-tap-highlight" content="no" /> 
+<title>Sentrifugo - Open Source HRMS</title>
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+
+
+
+</head>
+	<body>
+
+
+
+
+
+
+		
+
+ 
+        <div id='mainDiv' align="center" >
+            <div id="main-div">
+                <div id="page-container">        
+                <!-- Header Part Starts-->
+                    <div id="header">					
+                <a href="http://servicecentral.sagarsoft.com/index.php" style="text-decoration:none;" class="logo">
+                    <img src="http://servicecentral.sagarsoft.com/public/uploads/organisation/organisation_image_1537969343.png">
+                </a> <!-- added by sapplica -->
+             
+                                     
+                            
+                  
+    
+                    
+                <div class="links">    					
+                    <a class="userprofilepic" id="logoutbutton"> 
+                    <i>
+                        <img class="js_profile_img" id="profile_img" width="28" height="28" border="0" src="http://servicecentral.sagarsoft.com/public/uploads/profile/preview_184519.jpg" />
+                    </i>
+                    <span id="prof_name" title="Venkata Ramana Subrahmanyam Maradani">
+                        Venkata Ramana..                </span>
+                    <b id="b_id" ></b>							
+                    </a>
+                    <div class="logoutdiv" id="logoutid" style="display:none">
+                    <div class="arrow-div"></div>
+                    <a href="http://servicecentral.sagarsoft.com/index.php/dashboard/viewprofile" class="first">View Profile</a>
+                    <a href="http://servicecentral.sagarsoft.com/index.php/viewsettings/1">Settings</a>                                                        
+                    <a href="http://servicecentral.sagarsoft.com/index.php/dashboard/changepassword">Change Password</a>
+        <span id="tourLink">Take Tour</span>
+        
+        <a href="http://servicecentral.sagarsoft.com/index.php/index/logout">Logout</a>
+            </div>
+        </div>
+    
+                            
+                
+                 <!--  <a target="_blank" href="" class="importformatlink flt_left">User Guide</a> -->			
+                
+      
+    
+            <div id="themes_id" style="position:relative; float:right; margin-right:15px; display: none; ">
+                <div class="themes_iconnor">Themes</div>
+            
+                <div id="themes_div" style="display: none;" class="themesbg">
+                    <div class="themes_icon">Themes</div>
+                      <div class="themes_spritediv">
+                        <span class="themes_sprite blue" title="Blue" onclick="javascript:setTheme('default');"></span>
+                        <span class="themes_sprite brown" title="Brown" onclick="javascript:setTheme('brown');"></span>
+                        <span class="themes_sprite gray" title="Gray" onclick="javascript:setTheme('gray');"></span>
+                        <span class="themes_sprite skyblue" title="Skyblue" onclick="javascript:setTheme('skyblue');"></span>
+                        <span class="themes_sprite peacock" title="Peacock" onclick="javascript:setTheme('peacock');"></span>
+                        <span class="themes_sprite green" title="Green" onclick="javascript:setTheme('green');"></span>
+                        <span class="themes_sprite orange" title="Orange" onclick="javascript:setTheme('orange');"></span>
+                    </div>
+                  </div>
+             </div>
+                                        
+    </div>
+                                <!-- Header End here-->		 
+                                
+                                <!--NAVIGATION BAR-->
+    <div id="content"><div class="tour_aboutHrms"></div>            
+    
+    <div class='home_menu'><div role='main' class='menu-head mainmenuheight' id='menu-shadow' >
+        <ul id='main_ul' class='menu flex'>
+            <li routerLink="/dashboard" id='main_parent_173' super-parent='main_parent_173'
+                class='clickable_menu -main tour_dashboard' selected-class=''> <a
+                    id='173'><b>Dashboard</b></a></li>
+            <li routerLink="/selfservice" id='main_parent_4' super-parent='main_parent_4'
+                class='clickable_menu -main-common tour_employeeselfservice' menu-url=''
+                for-childs='div_mchilds_4' selected-class='-common'><a id='4'><span
+                        class='scroll-menu -common'></span><b> Self Service</b></a></li>
+            <li routerLink="/servicerequest" id='main_parent_143' super-parent='main_parent_143'
+                class='clickable_menu -main-common tour_service' menu-url=''
+                for-childs='div_mchilds_143' selected-class='-common'><a id='143'><span
+                        class='scroll-menu -common'></span><b>Service Request</b></a></li>
+            <li routerLink="/hr" id='main_parent_3' super-parent='main_parent_3'
+                class='clickable_menu -main-common tour_humanresource' menu-url=''
+                for-childs='div_mchilds_3' selected-class='-common'><a id='3'><span
+                        class='scroll-menu -common'></span><b>HR</b></a></li>
+            <li id='main_parent_149' super-parent='main_parent_149'
+                class='clickable_menu -main-common tour_performanceappraisal' menu-url=''
+                for-childs='div_mchilds_149' selected-class='-common' routerLink="/appraisals"><a
+                    id='149'><span class='scroll-menu -common'></span><b>Appraisals</b></a></li>
+
+            <li id='main_parent_19' super-parent='main_parent_19'
+                class='clickable_menu -main-common tour_requisition' menu-url=''
+                for-childs='div_mchilds_19' selected-class='-common' routerLink='/recruitments'><a
+                    id='19'><span class='scroll-menu -common'></span><b>Recruitments</b></a></li>
+                    
+            <li id='main_parent_1' super-parent='main_parent_1'
+                class='clickable_menu -main-common tour_organization' menu-url=''
+                for-childs='div_mchilds_1' selected-class='-common' routerLink='/organization'><a id='1'><span
+                        class='scroll-menu -common'></span><b>Organization</b></a></li>
+            <li id='main_parent_185' super-parent='main_parent_185'
+                class='clickable_menu -main-common tour_expenses' menu-url=''
+                for-childs='div_mchilds_185' selected-class='-common' routerLink='/expenses'><a id='185'><span
+                        class='scroll-menu -common'></span><b>Expenses</b></a></li>
+            <li id='main_parent_201' super-parent='main_parent_201'
+                class='clickable_menu -main-common tour_disciplinary' menu-url=''
+                for-childs='div_mchilds_201' selected-class='-common'routerLink='/disciplinary'><a id='201'><span
+                        class='scroll-menu -common'></span><b>Disciplinary</b></a></li>
+            <li id='main_parent_215' super-parent='main_parent_215'
+                class='clickable_menu -main-common tour_conferencebookings' menu-url=''
+                for-childs='div_mchilds_215' selected-class='-common' routerLink='/conferencebooking'><a id='215'><span
+                        class='scroll-menu -common'></span><b>Conference Bookings</b></a></li>
+            <li id='main_parent_217' super-parent='main_parent_217'
+                class='clickable_menu -main-common tour_payslips' menu-url=''
+                for-childs='div_mchilds_217' selected-class='-common' routerLink='/payslips'><a id='217'><span
+                        class='scroll-menu -common'></span><b>Payslips</b></a></li>
+            <li id='main_parent_223' super-parent='main_parent_223'
+                class='clickable_menu -main-common '
+                menu-url='http://servicecentral.sagarsoft.com/index.php/it' for-childs=''
+                selected-class='-common' routerLink='/itdeclarations'><a id='223'><span class='scroll-menu -common'></span><b>IT
+                        Declarations</b></a></li>
+            <li id='main_parent_130' super-parent='main_parent_130'
+                class='clickable_menu -main tour_timemanagement'
+                menu-url='http://servicecentral.sagarsoft.com/index.php/timemanagement'
+                selected-class=''> <a id='130'><b>Time</b></a></li>
+        </ul>
+                 </div></div>
+                
+    
+    <div class="content_inners">
+        <div id="menu-hide-show">
+            <div style="display:none" id = 'mainmenushowhidebutton'>
+                <div class='sprite'></div>
+            </div>
+        </div> 
+        
+        
+    
+    <div id="container">
+        <div id="spinner" class="ajax-loader" style="display:none;" >
+        <img id="img-spinner" src="http://servicecentral.sagarsoft.com/public/media/images/loader2.gif" alt="Loading" />				
+    </div>
+    <!-- <div id="wrapper">  --> <!-- Toggle Left Menu --> <!-- <div class="toggleleftwrapper">Close</div> --> <!-- End Toggle Left Menu -->
+    <div class="active" id="wrappernew">      
+        <!-- Sidebar -->
+          <div id="sidebar-wrapper">
+              <!--Menu-->
+          <ul class="sidebar-nav" id="sidebar_menu">
+               <li class="sidebar-brand">
+                   <a href="#" id="menu-toggle">
+                      <!--<span class="glyphicon glyphicon-chevron-left" id="main_icon"></span>-->
+                      <span class="fa fa-caret-right mtg mtg-off"></span>
+                      <span class="fa fa-caret-left mtg mtg-on"></span>
+                   </a>
+                </li>
+          </ul>
+                                               
+    <div class='side-menu div_mchilds_4'>
+                                    
+        <ul id="addbtna" class="dropdown-content" style="list-style: none; margin: 0; padding: 0;">
+            <li routerLink='/expenses'>Expenses</li>
+            <li routerLink='/receipts'>Receipts</li>
+             <li routerLink='/trips'>Trips</li>
+             <li routerLink='/advances'>Advances</li>
+             <li routerLink='/advances'>My Advance</li>
+             <li routerLink='/employeeadvances'>Employee Advance</li>
+             <li routerLink='/employeeexpenses'>My Employee Expenses</li>
+           </ul>
+                                            
+    </div>
+    </div>
+    <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+              <div class="row">
+                  <div class="col-md-12">
+        <div class="wrapperdivright">
+        <div id="breadcrumdiv">
+        
+            </div>
+        
+        
+    
+                                                
+        <div id="maincontentdiv">	
+            <div id="dialog-confirm" style="display:none;">
+                <div class="newframe-div">
+                    <div class="new-form-ui height32">
+                        <div class="division">
+                            <input type="text" maxlength="12"  id="number_value" name="number_value">
+                        </div>
+                        <span class="errors" id="errors-contactnumber"></span>
+                    </div>
+                </div>
+            </div>
+           
+            <div id="error_message" style="display:none;"></div>
+
+            <form name="Advance" id="formid" action="http://servicecentral.sagarsoft.com/index.php/expenses/employeeadvances/edit" method="post">
+                    
+            <input type="hidden" name="id" value="" id="id">		<input type="hidden" name="currencyid" id="currencyid" value="11"/>
+                    <div class="total-form-controller">
+                    
+                       <div class="new-form-ui clearb">
+                          <label class="required">Employee </label>
+                        <div class="division">
+            <select name="to_id" id="to_id" onchange="getProjects()" style="height: 28px; width: 200px;">
+                <option value="" label="Select Employee">Select Employee</option>
+            </select>						</div>
+                    </div>
+                        
+                        
+                          <div class="new-form-ui">
+                          <label >Project</label>
+                        <div class="division">
+            <select name="project_id" id="project_id" class="selectoption">
+                <option value="" label="Select Project">Select Project</option>
+            </select></div>
+                                               <span class="errors" id="errors-project_id" style="display:none;"></span>
+                                          </div>
+            
+                         
+                             
+                    <div class="new-form-ui clearb sm_currency">
+                    
+                            <label class="required">Amount</label>
+                            
+                            <div class="division">
+                            
+          			
+            <input type="text" name="amount" id="amount" value="" maxLength="180">								   <div class="errors" style="position: relative; top: inherit;" id="errors-currency_id">
+                                                      </div>
+                                            
+                            
+                            
+                               <input type="hidden" name="cal_amount" id="cal_amount" value="">
+                             <div id="currencynamediv" style="display:none; float:left; width: 100%;">
+                                  <span id="currencyname"></span>   
+                                      <span class="cxcText">
+                                         
+                                            <span class="cxcEdit" style="display:inline-block;">0</span>
+                                            
+                                           
+                                              <input class="cxcInput" min="1" style="display:none;" type="number" step="any"/> Rupee                           </span>
+                                 </div>          
+                                            
+                            </div>
+                            
+                        </div>
+                        
+                        
+                    
+                            <div class="new-form-ui clearb">
+                            <label class="required" >Payment Mode</label>
+                            <div class="division">
+            <select name="payment_mode_id" id="payment_mode_id" style="height: 28px; width: 200px;">
+                <option value="" label="Select payment">Select payment</option>
+                <option value="4" label="Card">Card</option>
+                <option value="1" label="Cash">Cash</option>
+                <option value="2" label="Cheque">Cheque</option>
+                <option value="3" label="Online Transfer">Online Transfer</option>
+            </select>								</div>
+                        </div>
+                        
+                
+                        
+                         <div class="new-form-ui">
+                          <label>Payment Ref # </label>
+                        <div class="division">
+            <input type="text" name="payment_ref_number" id="payment_ref_number" value="" maxLength="20">						</div>
+                        </div>
+                        
+                        <div class="new-form-ui clearb textareaheight">
+                          <label>Description</label>
+                        <div class="division">
+            <textarea name="description" id="description" rows="10" cols="50" maxlength="500"></textarea></div>
+                        </div>
+                        
+                    <div class="new-form-ui-submit">
+                    
+            <input type="submit" name="submit" id="submitbutton" value="Save" onclick="getAmount()">		<button onclick="window.location.href='http://servicecentral.sagarsoft.com/index.php/expenses/employeeadvances';" type="button" id="Cancel" name="Cancel">Cancel</button>
+                    </div>
+                    </div>
+
+            </form>
+                    </div>
+                     <div style="clear: both;"></div>
+                   </div>
+                   </div>
+            </div>
+        </div>
+    </div>
+        <div style="height: 20px;">&nbsp;</div>
+    </div>			
+            <div class="copytxt">
+                <div class="copy-center"><span class="copy_left">&copy; Sentrifugo, 2021</span><span class="copy_right">Powered By <a href="http://www.sapplica.com" target="new">Sapplica</a></span></div>	
+             </div>   
+                <div id="footer">                        
+                    <div id="quickview" style="display:none"></div>
+                    <div id="dialog" title="Confirmation Required" style="display: none; box-shadow: 0 3px 3px rgba(0, 0, 0, 0); min-height:20px !important; padding-top: 15px;">
+                        <div id="dialogText"></div> 
+                     </div>
+                    <div class="footerdivbg"> <!-- added by sapplica -->
+                                            <a class="settings" href="http://servicecentral.sagarsoft.com/index.php/viewsettings/1">
+                            <img width="18" height="19" border="0" src="http://servicecentral.sagarsoft.com/public/media/images/settings_icon.png"  title="Widgets" />
+                        </a>                     					
+                        <!-- Added by sapplica Here we are displaying the recently clicked tabs by the user -->					
+                            </div>				</div>
+                    
+            </div>
+                    </div>
+        </div>
+    
+    <!-- website tour html START -->
+    <div id="tourcontrols" class="tourcontrols" style="display:none;">
+        
+        <p>Welcome to Sentrifugo !!
+            <br />
+            Here for the first time?
+            <br />
+            For the best Sentrifugo tour experience, please maximize your browser.
+        </p>
+        <span class="button" id="activatetour">Start the tour<b class="start-tour-icon"></b></span>
+        <div class="nav">
+            <span class="button" id="prevstep" style="display:none;"><b>&lsaquo;</b> Previous</span>
+            <span class="button" id="nextstep" style="display:none;">Next <b>&rsaquo;</b></span>
+        </div>
+        <div class="fltleft">
+            <a id="restarttour" style="display:none;">Restart the tour</a>
+            <b id="separator-tour">|</b>
+            <a id="endtour" style="display:none;">End the tour</a>
+        </div>
+        <span class="close" id="canceltour"></span>
+    </div>
+    <!-- website tour html END -->
+    
+    
+    <!-- The JavaScript for website tour START -->
+    
+    <!-- The JavaScript for website tour END -->
+    <script type='text/javascript'>
+        $(document).ready(function() {
+     
+            $('#208').parent().hide();
+        });
+        </script><!--
+    For the working of popups in logmanager, 
+    the code from logmanager/index.phtml has been moved here
+    because json file and html file both are same.
+    Dated: 27-02-2014
+    -->
+    <div id="logmanagerContainer" style="display: none; overflow: auto;">
+        <div class="heading">
+            <a href="javascript:void(0)">
+                <img src="http://servicecentral.sagarsoft.com/public/media/images/close.png" name="" align="right" border="0" hspace="3" vspace="5"	class="closeAttachPopup" style="margin: -24px 8px 0 0;">
+             </a>
+        </div>
+        <iframe id="logmanagerCont" class="business_units_iframe" frameborder="0"></iframe>
+    
+    </div>
+    </div>
+    </div>
+    </div>
+</body>
+
+</html>
+
+
+
+
+
