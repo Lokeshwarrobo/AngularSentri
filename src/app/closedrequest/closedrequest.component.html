@@ -14,6 +14,7 @@
 
 
 
+
 </head>
 	<body>
 
@@ -173,11 +174,11 @@
                 </li>
           </ul>
                                                
-    <div class='side-menu div_mchilds_4' >
+    <div class='side-menu div_mchilds_4'>
                                     
-                                      <ul>        <li routerLink="/servicerequest" class="acc_li"><span id="acc_li_toggle_148" class="acc_li_toggle" ><b>My request summary</b></span>            <ul>                <li routerLink="servicerequest" parent-div="div_mchilds_143" super-parent="main_parent_143"  class="clickable_menu" primary_parent="148"><i class="span_sermenu">All</i> <b class="super_cnt">0</b></li>                <li routerLink="/openrequest" parent-div="div_mchilds_143" super-parent="main_parent_143"  class="clickable_menu" primary_parent="148"> <i class="span_sermenu">Open</i> <b class="super_cnt">0</b></li>                <li routerLink="/closerequest" parent-div="div_mchilds_143" super-parent="main_parent_143"  class="clickable_menu" primary_parent="148"><i class="span_sermenu">Closed</i> <b class="super_cnt">0</b></li>                <li routerLink="/rejectrequest" parent-div="div_mchilds_143" super-parent="main_parent_143"  class="clickable_menu" primary_parent="148"><i class="span_sermenu">Rejected</i> <b class="super_cnt">0</b></li>                <li routerLink="/cancelrequest" parent-div="div_mchilds_143" super-parent="main_parent_143"  class="clickable_menu" primary_parent="148"><i class="span_sermenu">Cancelled</i> <b class="super_cnt">0</b></li>                <li routerLink="/needmoreinfo"  parent-div="div_mchilds_143" super-parent="main_parent_143"  class="clickable_menu" primary_parent="148"><i class="span_sermenu">Need more info</i> <b class="super_cnt">0</b></li>            </ul>        </li></ul></div><div class='side-menu div_mchilds_3' style='display:none;'></div>
-                                       </div>     
-    
+                                      <ul>        <li routerLink="/servicerequest" class="acc_li"><span id="acc_li_toggle_148" class="acc_li_toggle" ><b>My request summary</b></span>            <ul>                <li routerLink="servicerequest" parent-div="div_mchilds_143" super-parent="main_parent_143"  class="clickable_menu" primary_parent="148"><i class="span_sermenu">All</i> <b class="super_cnt">{{allresult}}</b></li>                <li routerLink="/openrequest" parent-div="div_mchilds_143" super-parent="main_parent_143"  class="clickable_menu" primary_parent="148"> <i class="span_sermenu">Open</i> <b class="super_cnt">{{openresult}} </b></li>                <li routerLink="/closerequest" parent-div="div_mchilds_143" super-parent="main_parent_143"  class="clickable_menu" primary_parent="148"><i class="span_sermenu">Closed</i> <b class="super_cnt">{{closedresult}} </b></li>                <li routerLink="/rejectrequest" parent-div="div_mchilds_143" super-parent="main_parent_143"  class="clickable_menu" primary_parent="148"><i class="span_sermenu">Rejected</i> <b class="super_cnt">{{ rejectedresult}}</b></li>                <li routerLink="/cancelrequest" parent-div="div_mchilds_143" super-parent="main_parent_143"  class="clickable_menu" primary_parent="148"><i class="span_sermenu">Cancelled</i> <b class="super_cnt">{{canresult}} </b></li>                <li routerLink="/needmoreinfo"  parent-div="div_mchilds_143" super-parent="main_parent_143"  class="clickable_menu" primary_parent="148"><i class="span_sermenu">Need more info</i> <b class="super_cnt">0</b></li>            </ul>        </li></ul></div><div class='side-menu div_mchilds_3' style='display:none;'></div>
+                                            
+    </div>
     <div id="page-content-wrapper">
             <!-- Keep all page content within the page-content inset div! -->
             <div class="page-content inset">
@@ -203,7 +204,7 @@
                 </div>
             </div>
            						
-            <div class='table-header'><span>My request summary</span><div class='add-btn-div'><input type='button' title = 'Raise a Request' value='Raise a Request' class='sprite addrequest' /></div> </div>
+            <div class='table-header'><span>My request summary</span><div class='add-btn-div'><input routerLink="/raiserequest" type='button' title = 'Raise a Request' value='Raise a Request' class='sprite addrequest' /></div> </div>
             <div id='pendingleaves' class='details_data_display_block newtablegrid'>
             <table class='grid' align='center'  width='100%' cellspacing='0' cellpadding='4' border='0'>
                 <thead>
@@ -215,26 +216,36 @@
                         <th>Priority</th>
                         <th>Description</th>
                         <th>Raised By</th>
-                      
-                        
+                        <th>Raised on</th>
+                        <th>Status</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr *ngFor = "let e of ser">
-                        <td> {{ e.ticket }}</td>
-                        <td> {{ e.requestfor }}</td>
-                        <td> {{ e.category }}</td>
-                        <td> {{ e.requestType }}</td>
-                        <td> {{ e.priority }}</td>
-                        <td> {{ e.description }}</td>
-                        <td> {{ e.raisedBy }}</td>
-                        <td> {{ e.raisedOn }}</td>
-                        <td> {{ e.status }}</td>
+              
+                <tbody *ngFor = "let ef of serl"  >
+                   
+                    <tr  *ngIf="ef.status == 'closed' " >
+           
+                        <td> {{ ef.ticket }}</td>
+                        <td> {{ ef.requestFor }}</td>
+                        <td> {{ ef.category }}</td>
+                        <td> {{ ef.requestType }}</td>
+                        <td> {{ ef.priority }}</td>
+                        <td> {{ ef.description }}</td>
+                        <td> {{ ef.raisedBy }}</td>
+                        <td> {{ ef.raisedOn }}</td>
+                        <td> {{ ef.status }}</td>
+                        
+                   
                     </tr>
+                    
                 </tbody>
+                
+                
+                
+                
             </table>
             </div>                         
-    
+            
     </div>
     
     </div>
@@ -318,6 +329,5 @@
 </body>
 
 </html>
-
 
 

@@ -136,7 +136,7 @@
                 menu-url='http://servicecentral.sagarsoft.com/index.php/it' for-childs=''
                 selected-class='-common' routerLink='/itdeclarations'><a id='223'><span class='scroll-menu -common'></span><b>IT
                         Declarations</b></a></li>
-            <li routerLink = '/time' id='main_parent_130' super-parent='main_parent_130'
+            <li id='main_parent_130' super-parent='main_parent_130'
                 class='clickable_menu -main tour_timemanagement'
                 menu-url='http://servicecentral.sagarsoft.com/index.php/timemanagement'
                 selected-class=''> <a id='130'><b>Time</b></a></li>
@@ -201,166 +201,35 @@
             </div>
             <div id="error_message" style="display:none;"></div>
 
-            <form name="myskills" id="formid" action="http://servicecentral.sagarsoft.com/index.php/myskills/edit" method="post">
+            <form name="myskills" id="formid" #userPost="ngForm">
                     
-            <input type="hidden" name="id" value="" id="id">        <div class="total-form-controller">
+                   <div class="total-form-controller">
                         <div class="new-form-ui">
                                 <label class="required">Skill</label>
                                 <div class="division">
-            <select class="selectoption" name="skill_id" id="skill_id">
-                <option value="" label="Select Skill">Select Skill</option>
-                <option value="1" label="Git & Version Control System">Git & Version Control System</option>
-                <option value="2" label="Windows">Windows</option>
-                <option value="3" label="Linux">Linux</option>
-                <option value="4" label="MAC">MAC</option>
-                <option value="5" label="Citrix">Citrix</option>
-                <option value="6" label="VM Ware">VM Ware</option>
-                <option value="7" label="DevOps">DevOps</option>
-                <option value="8" label="Manual Testing">Manual Testing</option>
-                <option value="9" label="Quality Assurance">Quality Assurance</option>
-                <option value="10" label="Debugging">Debugging</option>
-                <option value="11" label="Automation Testing">Automation Testing</option>
-                <option value="12" label="Web Testing">Web Testing</option>
-                <option value="13" label="Selenium">Selenium</option>
-                <option value="14" label="Appium">Appium</option>
-                <option value="15" label="PMP">PMP</option>
-                <option value="16" label="C#">C#</option>
-                <option value="17" label="PHP">PHP</option>
-                <option value="18" label="Python">Python</option>
-                <option value="19" label="Shell Scripting">Shell Scripting</option>
-                <option value="20" label="Java">Java</option>
-                <option value="21" label="Swift">Swift</option>
-                <option value="22" label="Android Development">Android Development</option>
-                <option value="23" label="iOS Development">iOS Development</option>
-                <option value="24" label="Node JS">Node JS</option>
-                <option value="25" label="Business Analyst">Business Analyst</option>
-                <option value="26" label="Supporting Skills">Supporting Skills</option>
-                <option value="27" label="Trouble Shooting & Analytical Abilities">Trouble Shooting & Analytical Abilities</option>
-                <option value="28" label="Restful Services & APIs">Restful Services & APIs</option>
-                <option value="29" label="Web Services">Web Services</option>
-                <option value="30" label="HTML">HTML</option>
-                <option value="31" label="CSS">CSS</option>
-                <option value="32" label="CSS3">CSS3</option>
-                <option value="33" label="HTML5">HTML5</option>
-                <option value="34" label="JavaScript">JavaScript</option>
-                <option value="35" label="Cross-Browser Development">Cross-Browser Development</option>
-                <option value="36" label="Photoshop">Photoshop</option>
-                <option value="37" label="Illustrator">Illustrator</option>
-                <option value="38" label="Web Designing">Web Designing</option>
-                <option value="39" label="Responsive CSS">Responsive CSS</option>
-                <option value="40" label="Adobe Dreamweaver">Adobe Dreamweaver</option>
-                <option value="41" label="Adobe InDesign">Adobe InDesign</option>
-                <option value="42" label="UX">UX</option>
-                <option value="43" label="Print Media">Print Media</option>
-                <option value="44" label="Coreldraw">Coreldraw</option>
-                <option value="45" label="Ajax">Ajax</option>
-                <option value="46" label="ASP.net">ASP.net</option>
-                <option value="47" label=".Net">.Net</option>
-                <option value="48" label="Entity 4">Entity 4</option>
-                <option value="49" label="Teradata">Teradata</option>
-                <option value="50" label="MicrosoftPowerBI">MicrosoftPowerBI</option>
-                <option value="51" label="Oracle">Oracle</option>
-                <option value="52" label="IBM DB2">IBM DB2</option>
-                <option value="53" label="Mongo DB">Mongo DB</option>
-                <option value="54" label="Informatica">Informatica</option>
-                <option value="55" label="MSBI">MSBI</option>
-                <option value="56" label="Amazon Webservices (Cloud)">Amazon Webservices (Cloud)</option>
-                <option value="57" label="Digital Ocean (Cloud)">Digital Ocean (Cloud)</option>
-                <option value="58" label="Scala">Scala</option>
-                <option value="59" label="R">R</option>
-                <option value="60" label="PHPCI (DevOps)">PHPCI (DevOps)</option>
-                <option value="61" label="Deployer (DevOps)">Deployer (DevOps)</option>
-                <option value="62" label="JQuery (JavaScript)">JQuery (JavaScript)</option>
-                <option value="63" label="Ext JS (JavaScript)">Ext JS (JavaScript)</option>
-                <option value="64" label="React JS (JavaScript)">React JS (JavaScript)</option>
-                <option value="65" label="Knockout JS (JavaScript)">Knockout JS (JavaScript)</option>
-                <option value="66" label="WordPress (PHP)">WordPress (PHP)</option>
-                <option value="67" label="Angular JS (JavaScript)">Angular JS (JavaScript)</option>
-                <option value="68" label="WCF (.Net)">WCF (.Net)</option>
-                <option value="69" label="Laravel (PHP)">Laravel (PHP)</option>
-                <option value="70" label="Codeigniter (PHP)">Codeigniter (PHP)</option>
-                <option value="71" label="Zend (PHP)">Zend (PHP)</option>
-                <option value="72" label="Bootstrap (Front-end)">Bootstrap (Front-end)</option>
-                <option value="73" label="Zurb (Front-end)">Zurb (Front-end)</option>
-                <option value="74" label="Servelets (Java)">Servelets (Java)</option>
-                <option value="75" label="JSP (Java)">JSP (Java)</option>
-                <option value="76" label="Spring (Java)">Spring (Java)</option>
-                <option value="77" label="Struts (Java)">Struts (Java)</option>
-                <option value="78" label="Hybernate (Java)">Hybernate (Java)</option>
-                <option value="79" label="Drupal (PHP)">Drupal (PHP)</option>
-                <option value="80" label="Django (Python)">Django (Python)</option>
-                <option value="81" label="Salesforce (CRM)">Salesforce (CRM)</option>
-                <option value="82" label="Odoo (Python)">Odoo (Python)</option>
-                <option value="83" label="Workday">Workday</option>
-                <option value="84" label="Rails (Ruby)">Rails (Ruby)</option>
-                <option value="85" label="Technical Writing">Technical Writing</option>
-                <option value="86" label="Content Writing">Content Writing</option>
-                <option value="87" label="Ruby">Ruby</option>
-                <option value="88" label="Test cases">Test cases</option>
-                <option value="89" label="Robot Framework">Robot Framework</option>
-                <option value="90" label="Windows Azure (Cloud)">Windows Azure (Cloud)</option>
-                <option value="91" label="MySQL">MySQL</option>
-                <option value="92" label="Video Editing">Video Editing</option>
-                <option value="93" label="MS SQL Server">MS SQL Server</option>
-                <option value="94" label="ReactNative">ReactNative</option>
-                <option value="95" label="Appcelerator">Appcelerator</option>
-                <option value="96" label="Entity Framework 6">Entity Framework 6</option>
-                <option value="97" label="ASP.NET MVC">ASP.NET MVC</option>
-                <option value="98" label="Web API">Web API</option>
-                <option value="99" label="Hadoop">Hadoop</option>
-                <option value="100" label="Unix">Unix</option>
-                <option value="101" label="Windows Services">Windows Services</option>
-                <option value="102" label="Windows Applications">Windows Applications</option>
-                <option value="103" label="Adobe">Adobe</option>
-                <option value="104" label="Visual Design">Visual Design</option>
-                <option value="105" label="Veeva">Veeva</option>
-                <option value="106" label="IOS">IOS</option>
-                <option value="107" label="SQL Server">SQL Server</option>
-                <option value="108" label="MS SQL">MS SQL</option>
-                <option value="109" label="Kinetica">Kinetica</option>
-                <option value="110" label="Active Batch">Active Batch</option>
-                <option value="111" label="SQL Server Jobs">SQL Server Jobs</option>
-                <option value="112" label="Integrations">Integrations</option>
-                <option value="113" label="Pre - Sales">Pre - Sales</option>
-                <option value="114" label="Java Technologies">Java Technologies</option>
-                <option value="115" label="EAI">EAI</option>
-                <option value="116" label="Web & Middleware App">Web & Middleware App</option>
-                <option value="117" label="SQL">SQL</option>
-                <option value="118" label="Unix Shell Scripts">Unix Shell Scripts</option>
-                <option value="119" label="Test Complete">Test Complete</option>
-                <option value="120" label="Machine Learning">Machine Learning</option>
-                <option value="121" label="AI">AI</option>
-                <option value="122" label="Interaction Design">Interaction Design</option>
-                <option value="123" label="Wireframing (Axure)">Wireframing (Axure)</option>
-                <option value="124" label="Data Science">Data Science</option>
-                <option value="125" label="Big Data">Big Data</option>
-                <option value="126" label="Springboot">Springboot</option>
-                <option value="127" label="Redis">Redis</option>
-                <option value="128" label="ServiceNow">ServiceNow</option>
-                <option value="129" label="IMS">IMS</option>
-                <option value="130" label="Support">Support</option>
-                <option value="131" label="Digital Transform.">Digital Transform.</option>
-                <option value="132" label="Management">Management</option>
-                <option value="133" label="ITIL 4">ITIL 4</option>
-                <option value="134" label="ITIL v3">ITIL v3</option>
+            <select class="selectoption" name="skill" ngModel id="skill_id">
+                <option *ngFor = "let e of result" value="{{ e.skill }}"  label="{{ e.skill }}">Select Skill</option>
+                <!-- <option  value="{{ e.skill }}" label="Angulr">{{e.skill}}</option> -->
+                
+           
             </select> &nbsp;</div>
                                             </div>
                         <div class="new-form-ui">
                                 <label class="required">Proficiency</label>
                                 <div class="division">
-            <select class="selectoption" name="rating_id" id="rating_id">
+            <select class="selectoption" name="proficiency" ngModel id="rating_id">
                 <option value="" label="Select Proficiency">Select Proficiency</option>
-                <option value="1" label="Training">Training</option>
-                <option value="2" label="Basic">Basic</option>
-                <option value="3" label="Intermediate">Intermediate</option>
-                <option value="4" label="Expert">Expert</option>
+                <option value="Training" label="Training">Training</option>
+                <option value="Basic" label="Basic">Basic</option>
+                <option value="Intermediate" label="Intermediate">Intermediate</option>
+                <option value="Expert" label="Expert">Expert</option>
             </select></div>
                                             </div>
             
                         <div class="new-form-ui">
                                 <label class="required">Level</label>
                                 <div class="division">
-            <select  class="selectoption" name="level_emp" id="level_emp">
+            <select  class="selectoption" name="level" ngModel id="level_emp">
                 <option value="" label="Select Level">Select Level</option>
                 <option value="Not yet ready" label="Not yet ready">Not yet ready</option>
                 <option value="Can work under supervision" label="Can work under supervision">Can work under supervision</option>
@@ -372,7 +241,7 @@
                         <div class="new-form-ui">
                                 <label class="required">Interest</label>
                                 <div class="division">
-            <select class="selectoption" name="emp_interest" id="emp_interest">
+            <select class="selectoption" name="intrest" ngModel id="emp_interest">
                 <option value="" label="Select Interest">Select Interest</option>
                 <option value="Interested" label="Interested">Interested</option>
                 <option value="Not interested" label="Not interested">Not interested</option>
@@ -381,7 +250,7 @@
             
                     <div class="new-form-ui-submit">
                     
-            <input type="submit" name="submit" id="submitbutton" value="Save" onclick="enableskillid()">        <button onclick="window.location.href='http://servicecentral.sagarsoft.com/index.php/myskills';" type="button" id="Cancel" name="Cancel">Cancel</button>
+            <input type="submit" name="submit" id="submitbutton" value="Save" (click)="addskill(userPost.value)">        <button  type="button" id="Cancel" name="Cancel">Cancel</button>
                     </div>
                 </div>
             </form>

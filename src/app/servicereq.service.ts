@@ -18,6 +18,7 @@ export class ServicereqService {
 
   private baseurl = 'http://3.7.175.86:8090';
   private baseUrl = 'http://localhost:8080'
+  //private baseurl = 'http://localhost:8080'
   constructor(private http: HttpClient) { }
 
   // getting all service request list
@@ -55,7 +56,7 @@ export class ServicereqService {
     return this.http.get<MyDetails[]>(`${this.baseUrl}/muds`)
   }
   
-  getByClosed():Observable<Servicerequest[]>{
+  getByClosed():Observable<Servicerequest[]> {
     return this.http.get<Servicerequest[]>(`${this.baseurl}/srl/closed`)
   }
   

@@ -1,6 +1,6 @@
 export class Servicerequest {
      ticket: number;
-     requestfor:string;
+     requestFor:string;
      category:string ;
      requestType:string ;
 	 priority:string ;

@@ -174,7 +174,7 @@
                                                
     <div class='side-menu div_mchilds_4'>
                                     
-                                      <ul>        <li routerLink="/servicerequest" class="acc_li"><span id="acc_li_toggle_148" class="acc_li_toggle" ><b>My request summary</b></span>            <ul>                <li routerLink="servicerequest" parent-div="div_mchilds_143" super-parent="main_parent_143"  class="clickable_menu" primary_parent="148"><i class="span_sermenu">All</i> <b class="super_cnt">0</b></li>                <li routerLink="/openrequest" parent-div="div_mchilds_143" super-parent="main_parent_143"  class="clickable_menu" primary_parent="148"> <i class="span_sermenu">Open</i> <b class="super_cnt">0</b></li>                <li routerLink="/closerequest" parent-div="div_mchilds_143" super-parent="main_parent_143"  class="clickable_menu" primary_parent="148"><i class="span_sermenu">Closed</i> <b class="super_cnt">0</b></li>                <li routerLink="/rejectrequest" parent-div="div_mchilds_143" super-parent="main_parent_143"  class="clickable_menu" primary_parent="148"><i class="span_sermenu">Rejected</i> <b class="super_cnt">0</b></li>                <li routerLink="/cancelrequest" parent-div="div_mchilds_143" super-parent="main_parent_143"  class="clickable_menu" primary_parent="148"><i class="span_sermenu">Cancelled</i> <b class="super_cnt">0</b></li>                <li routerLink="/needmoreinfo"  parent-div="div_mchilds_143" super-parent="main_parent_143"  class="clickable_menu" primary_parent="148"><i class="span_sermenu">Need more info</i> <b class="super_cnt">0</b></li>            </ul>        </li></ul></div><div class='side-menu div_mchilds_3' style='display:none;'></div></div>
+                                      <ul>        <li routerLink="/servicerequest" class="acc_li"><span id="acc_li_toggle_148" class="acc_li_toggle" ><b>My request summary</b></span>            <ul>                <li routerLink="servicerequest" parent-div="div_mchilds_143" super-parent="main_parent_143"  class="clickable_menu" primary_parent="148"><i class="span_sermenu">All</i> <b class="super_cnt">{{allresult}}</b></li>                <li routerLink="/openrequest" parent-div="div_mchilds_143" super-parent="main_parent_143"  class="clickable_menu" primary_parent="148"> <i class="span_sermenu">Open</i> <b class="super_cnt">{{openresult}} </b></li>                <li routerLink="/closerequest" parent-div="div_mchilds_143" super-parent="main_parent_143"  class="clickable_menu" primary_parent="148"><i class="span_sermenu">Closed</i> <b class="super_cnt">{{closedresult}}</b></li>                <li routerLink="/rejectrequest" parent-div="div_mchilds_143" super-parent="main_parent_143"  class="clickable_menu" primary_parent="148"><i class="span_sermenu">Rejected</i> <b class="super_cnt">{{rejectedresult}}</b></li>                <li routerLink="/cancelrequest" parent-div="div_mchilds_143" super-parent="main_parent_143"  class="clickable_menu" primary_parent="148"><i class="span_sermenu">Cancelled</i> <b class="super_cnt">{{canresult}}</b></li>                <li routerLink="/needmoreinfo"  parent-div="div_mchilds_143" super-parent="main_parent_143"  class="clickable_menu" primary_parent="148"><i class="span_sermenu">Need more info</i> <b class="super_cnt">0</b></li>            </ul>        </li></ul></div><div class='side-menu div_mchilds_3' style='display:none;'></div></div>
                                             
     
     <div id="page-content-wrapper">
@@ -218,10 +218,25 @@
                         
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                   <td colspan='14' class='no-data-td'><p class='no-data'>No Reportees Found.</p></td></tr> 
+                <tbody *ngFor = "let ef of serl"  >
+                   
+                    <tr  *ngIf="ef.status == 'rejected' " >
+           
+                        <td> {{ ef.ticket }}</td>
+                        <td> {{ ef.requestFor }}</td>
+                        <td> {{ ef.category }}</td>
+                        <td> {{ ef.requestType }}</td>
+                        <td> {{ ef.priority }}</td>
+                        <td> {{ ef.description }}</td>
+                        <td> {{ ef.raisedBy }}</td>
+                        <td> {{ ef.raisedOn }}</td>
+                        <td> {{ ef.status }}</td>
+                        
+                   
+                    </tr>
+                    
                 </tbody>
+                
             </table>
             </div>                         
     

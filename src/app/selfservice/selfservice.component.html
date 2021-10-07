@@ -205,79 +205,67 @@
                     </div>
                 </div>
             </div>
-            <form name="leaverequest" id="formid" action="http://servicecentral.sagarsoft.com/index.php/leaverequest" method="post">
-		
-                <input type="hidden" name="id" value="" id="id">				<input type="hidden" value="subrahmanyam.maradani@sagarsoft.in" id="employeeemail" name="employeeemail">
-                        <input type="hidden" value="yugandhar.sanapala@sagarsoft.in" id="repmanageremail" name="repmanageremail"> 		<input type="hidden" value="6" id="wkstrtday" name="wkstrtday">
-                        <input type="hidden" value="0" id="wkendday" name="wkendday">
-                        <input type="hidden" value="1" id="ishalfday" name="ishalfday">
+            <form name="leaverequest" id="formid" #userPost="ngForm">
+        
+                
                         <div class="total-form-controller">
                               
                             <div class="new-form-ui">
                               <label class="required">Available Leaves</label>
                             <div class="division">
-                <input type="text" name="no_of_days" id="no_of_days" value="0" readonly="readonly" onfocus="this.blur()"></div>
+                <input type="text" name="availableLeaves" ngModel id="no_of_days" value="6"  ></div>
                                         </div>
                             
                             <div class="new-form-ui">
                               <label class="required">Leave Type</label>
                             <div class="division" >
                               
-                <select name="leavetypeid" id="leavetypeid" class="selectoption">
+                <select name="leaveType" id="leavetypeid" ngModel class="selectoption">
                     <option value="" label="Select Leave Type">Select Leave Type</option>
-                    <option value="14!@#1!@#Forgot ID Card" label="Forgot ID Card">Forgot ID Card</option>
-                    <option value="13!@#3!@#Bereavement Leave" label="Bereavement Leave">Bereavement Leave</option>
-                    <option value="12!@#1!@#Official Work" label="Official Work">Official Work</option>
-                    <option value="11!@#0!@#Weekly Off" label="Weekly Off">Weekly Off</option>
-                    <option value="10!@#0!@#Business Travel or Meeting" label="Business Travel or Meeting">Business Travel or Meeting</option>
-                    <option value="9!@#1!@#Optional Holiday" label="Optional Holiday">Optional Holiday</option>
-                    <option value="8!@#0!@#Work from client location" label="Work from client location">Work from client location</option>
-                    <option value="7!@#10!@#Leave" label="Leave">Leave</option>
-                    <option value="6!@#0!@#Work From Home" label="Work From Home">Work From Home</option>
-                    <option value="4!@#3!@#Paternity" label="Paternity">Paternity</option>
-                    <option value="3!@#182!@#Maternity" label="Maternity">Maternity</option>
-                    <option value="2!@#0!@#Loss Of Pay" label="Loss Of Pay">Loss Of Pay</option>
-                    <option value="1!@#0!@#Compensatory Days" label="Compensatory Days">Compensatory Days</option>
+                    <option value="Forgot ID Card" label="Forgot ID Card">Forgot ID Card</option>
+                    <option value="Bereavement Leave" label="Bereavement Leave">Bereavement Leave</option>
+                    <option value="Official Work" label="Official Work">Official Work</option>
+                    <option value="Weekly Off" label="Weekly Off">Weekly Off</option>
+                    <option value="Business Travel or Meeting" label="Business Travel or Meeting">Business Travel or Meeting</option>
+                    <option value="Optional Holiday" label="Optional Holiday">Optional Holiday</option>
+                    <option value="Work from client location" label="Work from client location">Work from client location</option>
+                    <option value="Leave" label="Leave">Leave</option>
+                    <option value="Work From Home" label="Work From Home">Work From Home</option>
+                    <option value="Paternity" label="Paternity">Paternity</option>
+                    <option value="Maternity" label="Maternity">Maternity</option>
+                    <option value="Loss Of Pay" label="Loss Of Pay">Loss Of Pay</option>
+                    <option value="Compensatory Days" label="Compensatory Days">Compensatory Days</option>
                 </select></div>
                                         </div>
                 
-                            <div class="new-form-ui" id="work_date" style="display: none;">
-                              <label class="required"> Worked on<img class="tooltip" title="Day, month and four digit year with dashes" src="http://servicecentral.sagarsoft.com/public/media/images/help.png"></label>
-                            <div class="division">
-                <input type="text" name="project_work_date" id="project_work_date" value=""></div>
-                              <span class="errors" id="errors-project_work_date"></span>
-                            </div>
+                            
                 
-                            <div class="new-form-ui" id="date_time_project" style="display: none;">
-                              <label class="required">Project Name</label>
-                            <div class="division">
-                <input type="text" name="date_project" id="date_project" value=""></div>
-                                        </div>
+                            
                             
                             <div class="new-form-ui textareaheight">
                               <label class="required">Reason</label>
                             <div class="division">
-                <textarea name="reason" id="reason" rows="10" cols="50" maxlength="30"></textarea></div>
+                <textarea name="reason" id="reason" rows="10" cols="50" ngModel maxlength="30"></textarea></div>
                                         </div>
                             
                             <div class="new-form-ui">
                               <label class="required">From <img class="tooltip" title="Day, month and four digit year with dashes" src="/assets/images/help.png"></label>
                             <div class="division">
-                <input type="text" name="from_date" id="from_date" value="" readonly="readonly" onfocus="this.blur()" class="brdr_none"></div>
+                <input type="text" name="fromDate" ngModel id="from_date" value=""  class="brdr_none"></div>
                               <span class="errors" id="errors-from_date"></span>
                             </div>
                             
                             <div class="new-form-ui" id="todatediv">
                               <label class="required">To <img class="tooltip" title="Day, month and four digit year with dashes" src="/assets/images/help.png"></label>
                             <div class="division">
-                <input type="text" name="to_date" id="to_date" value="" readonly="readonly" onfocus="this.blur()" onblur="validate_todate()" class="brdr_none"></div>
+                <input type="text" name="toDate" ngModel id="to_date" value="" class="brdr_none"></div>
                                <span class="errors" id="errors-to_date"></span>
                             </div>
                             
                             <div class="new-form-ui">
                               <label class="required">Leave For</label>
                             <div class="division">
-                <select  class="selectoption" name="leaveday" id="leaveday">
+                <select  class="selectoption"  ngModel name="leaveFor" id="leaveday">
                     <option value="1" label="Full Day">Full Day</option>
                     <option value="2" label="Half Day">Half Day</option>
                 </select></div>
@@ -286,13 +274,13 @@
                             <div class="new-form-ui">
                               <label>Days</label>
                             <div class="division">
-                <input type="text" name="appliedleavesdaycount" id="appliedleavesdaycount" value="" readonly="readonly" onfocus="this.blur()"></div>
+                <input type="text" name="days" ngModel id="appliedleavesdaycount" value=""></div>
                             </div>
                             
                             <div class="new-form-ui">
                               <label class="required">Reporting Manager</label>
                             <div class="division">
-                <input type="text" name="rep_mang_id" id="rep_mang_id" value="" readonly="readonly" onfocus="this.blur()"></div>
+                <input type="text" name="reportingManager" id="rep_mang_id" ngModel value="Yugandhar Sanapala" readonly="readonly"></div>
                                         </div>
                                                 
                             
@@ -300,8 +288,8 @@
                         
                         <div class="new-form-ui-submit">
                         
-                <input type="submit" name="submit" id="submitbutton" value="Apply" >	
-                        <button name="Canceldialog" id="Canceldialog" onclick="closedialog('cancel');" type="button">Cancel</button>
+                <input type="submit" name="submit" (click)="applyleave(userPost.value)" id="submitbutton" value="Apply" >   
+                        <button name="Canceldialog" id="Canceldialog" type="button">Cancel</button>
                         </div>
                 </form>							
                                         

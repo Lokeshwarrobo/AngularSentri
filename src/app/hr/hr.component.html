@@ -216,10 +216,43 @@
                         
             <input type="submit" name="submit" id="submitbutton" value="Save">            <button onclick="window.location.href='http://servicecentral.sagarsoft.com/index.php/servicerequests/index/t/pA==';" type="button" id="Cancel" name="Cancel">Cancel</button>
                     </div>
-            </div>                       
-    
+            </div> 
+             <div id="employees_search" class="full-width">
+       <div class="list-container" id="more_employees">
+               <table>
+                   <tr>
+                    
+                        <div class="list-item" *ngFor="let e of this.result">
+                             <div class="li-head">
+                                 <div class="li-avatar"> <img src="http://servicecentral.sagarsoft.com/public/media/images/profile_pic.png" width="54" height="54" /> 
+                                 </div>
+                                 <div class="li-emp-details"> <span class="emp-name">{{e.name}} </span> <span class="emp-designation">{{e.role}}</span> <span class="emp-department">{{e.department}}</span> 
+                                 </div>
+                                 <div class="li-actions"> <a class='dropdown-button dottedbtn' href='#' data-activates='actdbtn-429'><i class="fa fa-ellipsis-v" aria-hidden="true"></i></a>
+                                      <ul id='actdbtn-429' class='dropdown-content'>
+                                            <li><i class="fa fa-eye"></i> View</li>
+                                      </ul>
+                                 </div>
+                              </div>
+                  
+                              <div class="li-body">
+                                  <ul>
+                                     <li><i class="fa fa-user" aria-hidden="true"></i><span>{{e.empid}}</span></li>
+                                     <li><i class="fa fa-envelope" aria-hidden="true"></i><span>{{e.email}}</span></li>
+                                     <li><i class="fa fa-phone" aria-hidden="true"></i><span>{{e.mobile}}</span></li>
+                                   </ul>
+                               </div>
+                   
+                           </div>
+                           </tr>
+               </table>
+       
+        </div>
+ </div>         
     </div>
     
+
+
     </div>
                              
                         </div>

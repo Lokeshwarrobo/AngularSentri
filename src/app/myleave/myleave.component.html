@@ -205,7 +205,7 @@
                     <!--  <div class="count_new_dis">-->
                 
             <span> All</span><br>
-            <label>0</label>
+            <label>{{ allresult }}</label>
         </div>
         
 
@@ -214,7 +214,7 @@
                     <!--  <div class="count_new_dis">-->
                 
             <span>Pending Leaves</span><br>
-            <label>0</label>
+            <label>{{pendingresult}}</label>
         </div>
         
 
@@ -223,7 +223,7 @@
                     <!--  <div class="count_new_dis">-->
                 
             <span>Cancelled Leaves</span><br>
-            <label>0</label>
+            <label>{{ cancelledresult }} </label>
         </div>
         
 
@@ -232,7 +232,7 @@
                     <!--  <div class="count_new_dis">-->
                 
             <span>Approved Leaves</span><br>
-            <label>0</label>
+            <label>{{ approvedleaves }}</label>
         </div>
         
 
@@ -241,7 +241,7 @@
                     <!--  <div class="count_new_dis">-->
                 
             <span>Rejected Leaves</span><br>
-            <label>0</label>
+            <label>{{rejectedleaves }} </label>
        
         </div>
 
@@ -260,9 +260,22 @@
                  <th>Applied On</th>
              </tr>
          </thead>
-         <tbody>
-             
-         </tbody>
+         <tbody *ngFor = "let ef of empleave"  >
+                   
+            <tr  *ngIf="ef.empId == 'SIL-0703' " >
+                <td></td>
+                <td> {{ ef.leaveType }}</td>
+                <td> {{ ef.reason }}</td>
+                <td> {{ ef.fromDate }}</td>
+                <td> {{ ef.toDate }}</td>
+                <td> {{ ef.days }}</td>
+                <td> {{ ef.appliedOn }}</td>
+                
+                
+           
+            </tr>
+            
+        </tbody>
      </table>
      </div>                               
     
