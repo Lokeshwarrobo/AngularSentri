@@ -219,8 +219,16 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-       <td colspan='14' class='no-data-td'><p class='no-data'>No data Found.</p></td></tr> 
+        <tr *ngFor = "let mgtd of mangerDetails">
+           <td></td>  
+            <td>{{ mgtd.businessunit}}</td>
+            <td>{{ mgtd.department}}</td>
+            <td>{{ mgtd.financialyear}}</td>
+            <td>{{ mgtd.appraisalmode}}</td>
+            <td>{{ mgtd.period}}</td>
+            <td>{{ mgtd.appraisalstatus}}</td>
+            <td>{{ mgtd.processstatus}}</td>
+        </tr>
     </tbody>
 </table>
 </div>

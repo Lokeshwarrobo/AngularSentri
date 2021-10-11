@@ -216,9 +216,15 @@
                         
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                   <td colspan='14' class='no-data-td'><p class='no-data'>No data Found.</p></td></tr>
+                <tbody *ngFor="let e of ann"> 
+                    <tr> 
+                        <td width=90>{{e.subject}}</td> 
+                        <td>{{e.businessunits}}</td> 
+                        <td>{{e.departments}} 
+                        </td> 
+                        <td>{{e.description}}</td> 
+                    
+                </tr> 
                 </tbody>
             </table>
             </div>

@@ -233,8 +233,18 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                   <td colspan='14' class='no-data-td'><p class='no-data'>No data Found.</p></td></tr>
+                    <tr *ngFor = "let myteamincident of myteamincidents">
+                       <td></td>
+                      
+                        
+                        <td>{{ myteamincident.business_unit}}</td>
+                        <td>{{ myteamincident.department}}</td>
+                        <td>{{ myteamincident.violation_name}}</td>
+                        <td>{{ myteamincident.date_of_occurence}}</td>
+                        <td>{{ myteamincident.appealed}}</td>
+                        <td>{{ myteamincident.verdict}}</td>
+                       
+                    </tr>
                 </tbody>
             </table>
             </div>

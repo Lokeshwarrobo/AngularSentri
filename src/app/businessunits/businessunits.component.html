@@ -219,9 +219,17 @@
                         
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                   <td colspan='14' class='no-data-td'><p class='no-data'>No data Found.</p></td></tr>
+                <tbody *ngFor="let e of bus"> 
+                    <tr> 
+                        <td width=90>{{e.name}}</td> 
+                        <td>{{e.code}}</td> 
+                        <td>{{e.startedon}}</td> 
+                        <td>{{e.streetadress}}</td> 
+                        <td>{{e.city}}</td> 
+                  <td>{{e.state}}</td> 
+                  <td>{{e.country}}</td> 
+                  <td>Time zone</td> 
+                   </tr> 
                 </tbody>
             </table>
             </div>

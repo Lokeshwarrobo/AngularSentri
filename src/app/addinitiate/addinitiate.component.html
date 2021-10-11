@@ -202,22 +202,19 @@
             </div>
             						
             <div class="cofig_title" style="margin-left: 0px; padding-top: 10px;padding-bottom: 10px;">Exit Procedure Details </div>
-            <form id="exitProcFrm" name="exitProcFrm" method="post">
+            <form id="exitProcFrm" name="exitProcFrm" method="post" #userPost="ngForm">
                <div class="total-form-controller">
                 <div class="new-form-ui clearb">
                   <label class="required">Exit Type</label>
                   <div class="division">
-          <select class="selectoption" name="exit_type" id="exit_type">
-              <option value="" label="Select Exit Type">Select Exit Type</option>
-              <option value="1" label="Absconding">Absconding</option>
-              <option value="2" label="Suspended">Suspended</option>
-              <option value="3" label="Resigned">Resigned</option>
-              <option value="7" label="Termination">Termination</option>
+          <select class="selectoption" name="exit_type" ngModel id="exit_type">
+              <option *ngFor = "let e of add" value="{{ e.exitType }}"  label="{{ e.exitType }}">Select Exit Type</option>
+              
           </select></div>
                   <span class="errors" id="errors-exit_type">
                           </span>
                 </div>  
-                <div class="new-form-ui clearb">
+                <div class="new-form-ui clearb" ngModel>
                   <label class="required">Comments</label>
                   <div class="division">
           <textarea name="comments" id="comments" onkeyup="removeValidation()" rows="24" cols="80"></textarea></div>
@@ -227,8 +224,8 @@
               </div>
               <div class="new-form-ui-submit">
                 
-          <input type="submit" name="submit" id="submitBtn" value="Initiate">      
-                  <button onclick="window.location.href='http://servicecentral.sagarsoft.com/index.php/exit/exitproc';" id="Cancel" name="Cancel" type="button" >Cancel</button>
+          <input type="submit" (click)="addskill(userPost.value)"  name="submit" id="submitBtn" value="Initiate">      
+                  <button  id="Cancel" name="Cancel" type="button" >Cancel</button>
               </div>
             </form>
     

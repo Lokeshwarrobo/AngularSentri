@@ -215,44 +215,45 @@
             </div>
            
             <div id="error_message" style="display:none;"></div>
-<form name="addOrEditTrips" id="formid" action="http://servicecentral.sagarsoft.com/index.php/expenses/trips/edit" method="post">
-		
-<input type="hidden" name="id" value="" id="id">  <div class="total-form-controller">
-	    <div class="new-form-ui ">
-		    <label class="required">Trip </label>
-			<div class="division">
-<input type="text" name="trip_name" id="trip_name" value="" maxLength="50">						</div>
-		</div>		
-		
-		<div class="new-form-ui ">
-		    <label>From date </label>
-			<div class="division">
-<input type="text" name="from_date" id="from_date" value="" class="brdr_none" readonly="readonly" onfocus="this.blur()">						</div>
-		</div>
-		
-		<div class="new-form-ui ">
-		    <label>To date </label>
-			<div class="division">
-<input type="text" name="to_date" id="to_date" value="" class="brdr_none" readonly="readonly" onfocus="this.blur()">						</div>
-		</div>
-		
-		<div class="new-form-ui textareaheight">
-		    <label>Description </label>
-			<div class="division">
-<textarea name="description" id="description" maxLength="180" rows="24" cols="80"></textarea></div>
-		</div>
-		
-		
-				
-			<input type="hidden" name="isfrompopup" id="isfrompopup" value="">
-									   
-			<div class="new-form-ui-submit">
-			
-<input type="submit" name="submit" id="submitbutton" value="Save">												<button onclick="window.location.href='http://servicecentral.sagarsoft.com/index.php/expenses/trips'" type="button" >Cancel</button>
-							
-		</div>
- </div>
-</form>
+            <form name="addOrEditTrips" id="formid" #userPost="ngForm">
+
+                <input type="hidden" name="id" value="" id="id">
+                <div class="total-form-controller" ngModel>
+                    <div class="new-form-ui ">
+                        <label class="required">Trip </label>
+                        <div class="division">
+                            <input type="text" name="trip" id="trip" value="" maxLength="50" ngModel> </div>
+                    </div>
+
+                    <div class="new-form-ui ">
+                        <label>From date </label>
+                        <div class="division">
+                            <input type="date" name="fromDate" id="fromDate" value="" class="brdr_none" ngModel> </div>
+                    </div>
+
+                    <div class="new-form-ui ">
+                        <label>To date </label>
+                        <div class="division">
+                            <input type="date" name="toDate" id="toDate" value="" class="brdr_none" ngModel> </div>
+                    </div>
+
+                    <div class="new-form-ui textareaheight">
+                        <label>Description </label>
+                        <div class="division">
+                            <textarea name="description" id="description" maxLength="180" rows="24" cols="80" ngModel></textarea></div>
+                    </div>
+
+
+
+                    <input type="hidden" name="isfrompopup" id="isfrompopup" value="" ngModel>
+
+                    <div class="new-form-ui-submit">
+
+                        <input type="submit" name="submit" id="submitbutton" value="Save" (click)="addtrip(userPost.value)"> <button type="button" id="Cancel" name="Cancel">Cancel</button>
+
+                    </div>
+                </div>
+            </form>
             
 
             						

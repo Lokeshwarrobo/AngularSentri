@@ -233,9 +233,21 @@
                         
                     </tr>
                 </thead>
-                <tbody>
+                <tbody *ngFor="let e of exp">
                     <tr>
-                   <td colspan='14' class='no-data-td'><p class='no-data'>No data Found.</p></td></tr>
+                        <td></td>
+                        <td>{{e.expenseName}}</td>
+                        <td>{{e.project}}</td>
+                        <td></td>
+                        <td>{{e.category}}</td>
+                        <td>{{e.expenseDate}}</td>
+                        <td>{{e.amount}}</td>
+                        <td>{{e.reimbursable}}</td>
+                        <td>Submitted</td>
+                        <!-- <td colspan='14' class='no-data-td'>
+                            <p class='no-data'>No data Found.</p>
+                        </td> -->
+                    </tr>
                 </tbody>
             </table>
             </div>

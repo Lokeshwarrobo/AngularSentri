@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { Route } from '@angular/compiler/src/core';
+
 @Component({
   selector: 'app-addmyskills',
   templateUrl: './addmyskills.component.html',

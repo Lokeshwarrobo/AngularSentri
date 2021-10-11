@@ -201,7 +201,7 @@
                 </div>
             </div>
             						
-            <div class='table-header'><span>Initiate/Check Status</span><div class='add-btn-div'><input type='button' title = 'Add' value='Add' class='sprite addrequest' /></div> </div>
+            <div class='table-header'><span>Initiate/Check Status</span><div class='add-btn-div'><input type='button' routerLink ="/addinitiate" title = 'Add' value='Add' class='sprite addrequest' /></div> </div>
 <div id='pendingleaves' class='details_data_display_block newtablegrid'>
 <table class='grid' align='center'  width='100%' cellspacing='0' cellpadding='4' border='0'>
     <thead>
@@ -214,9 +214,16 @@
             <th>Initiated Date</th>
         </tr>
     </thead>
-    <tbody>
-        <tr>
-       <td colspan='14' class='no-data-td'><p class='no-data'>No Reportees Found.</p></td></tr> 
+    <tbody *ngFor="let e of inits"> 
+        <tr> 
+            <td></td>
+            <td >{{e.bussinessUnit}}</td> 
+            <td>{{e.department}}</td> 
+            <td>{{e.exitType}}</td> 
+            <td>{{e.overallStatus}}</td> 
+            <td>{{e.intiatedDate}}</td> 
+    
+       </tr> 
     </tbody>
 </table>
 </div>   

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ConferenceBooking } from '../models/conference-booking';
+import { ServicereqService } from '../servicereq.service';
+
 
 @Component({
   selector: 'app-mybookings',
@@ -7,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MybookingsComponent implements OnInit {
 
-  constructor() { }
+  allbooking: ConferenceBooking[];
+
+  constructor(private conferencebookingserve: ServicereqService ) { }
 
   ngOnInit(): void {
+    this.getAllBookings();
+  }
+ 
+
+  getAllBookings(){
+    this.conferencebookingserve.GetAllBooking().subscribe(
+      data =>{this.allbooking = data}
+    )
   }
 
 }

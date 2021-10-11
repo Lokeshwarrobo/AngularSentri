@@ -231,9 +231,17 @@
                         
                     </tr>
                 </thead>
-                <tbody>
+                <tbody *ngFor="let e of tr">
                     <tr>
-                   <td colspan='14' class='no-data-td'><p class='no-data'>No data Found.</p></td></tr>
+                        <td></td>
+                        <td>{{e.trip}}</td>
+                        <td>{{e.fromDate}}</td>
+                        <td>{{e.toDate}}</td>
+                        <td>{{e.description}}</td>
+                        <!-- <td colspan='14' class='no-data-td'>
+                            <p class='no-data'>No data Found.</p>
+                        </td> -->
+                    </tr>
                 </tbody>
             </table>
             </div>

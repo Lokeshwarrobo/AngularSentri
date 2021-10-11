@@ -249,8 +249,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                   <td colspan='14' class='no-data-td'><p class='no-data'>No data Found.</p></td></tr>
+                    <tr *ngFor = "let cb of allbooking">
+                        
+                        <td>{{ cb.conferenceRoom }}</td>
+                        <td> {{ cb.begin }}</td>
+                        <td> {{ cb.end }} </td>
+                        <td>{{ cb.bookedBy }} </td>
+                        <td> {{cb.status}}</td>
+                    </tr>
                 </tbody>
             </table>
             </div>

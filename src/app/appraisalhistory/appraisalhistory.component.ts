@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Myappraisalhistory } from '../models/myappraisalhistory';
+import { ServicereqService } from '../servicereq.service';
 @Component({
   selector: 'app-appraisalhistory',
   templateUrl: './appraisalhistory.component.html',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppraisalhistoryComponent implements OnInit {
 
-  constructor() { }
+  myappraisal:Myappraisalhistory[];
+
+  constructor(private serv: ServicereqService) { }
 
   ngOnInit(): void {
+    this.getDeatils();
+  }
+
+  getDeatils(){
+    this.serv.getMyAppraisalHistorydetails(). 
+    subscribe(data => {this.myappraisal =data;})
+
   }
 
 }

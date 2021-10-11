@@ -219,149 +219,82 @@
                     <div id="booking1_success_div" class="ml-alert-1-success" style="display:none;">
                         <div class="style-1-icon success"></div>
                     </div>
-                    <form name="scheduledbookings" id="formid" action="http://servicecentral.sagarsoft.com/index.php/scheduledbookings" method="post">
+                    <form name="scheduledbookings" id="formid" #userPost="ngForm">
                             
                     
-                            <div class="total-form-controller">
-                                  
-                                <div class="new-form-ui">
-                                  <label class="required">Conference Room</label>
-                                <div class="division">
-                    <select name="resource_id" id="resource_id" style="height: 28px; width: 200px;">
-                        <option value="" label="Select Conference Room">Select Conference Room</option>
-                        <option value="1" label="Lotus">Lotus</option>
-                        <option value="2" label="Lavender">Lavender</option>
-                        <option value="3" label="Irish">Irish</option>
-                        <option value="4" label="Rose">Rose</option>
-                        <option value="5" label="Tulip">Tulip</option>
-                        <option value="6" label="Daisy">Daisy</option>
-                        <option value="7" label="Daffodil">Daffodil</option>
-                    </select></div>
-                                            </div>
-                                
-                                <div class="new-form-ui"  id="begin">
-                                  <label class="required">Begin</label>
-                                <div class="division">
-                    <input type="text" name="begin_time" id="begin_time" value="" onchange="validateendtime()"></div>
-                                            </div>
-                    
-                                <input type="hidden" name="hid_begin_time_error" id="hid_begin_time_error" value="">
-                                <input type="hidden" name="hid_end_time_error" id="hid_end_time_error" value="">
-                    
-                                <div class="new-form-ui"  id="end">
-                                  <label class="required">End</label>
-                                <div class="division">
-                    <input type="text" name="end_time" id="end_time" value="" onchange="validateendtime()"></div>
-                                            </div>
-                                
-                                <div class="new-form-ui">
-                                  <label class="required">Repeat</label>
-                                <div class="division">
-                    <select name="repeat" id="repeat" style="height: 28px; width: 200px;">
-                        <option value="" label="Select repeat">Select repeat</option>
-                        <option value="Does not repeat" label="Does not repeat">Does not repeat</option>
-                        <option value="Daily" label="Daily">Daily</option>
-                        <option value="Weekly" label="Weekly">Weekly</option>
-                        <option value="Monthly" label="Monthly">Monthly</option>
-                    </select></div>
-                                            </div>
-                    
-                    
-                                <div class="new-form-ui" id="days" style="display:none">
-                                  <label class="required">No. of days to repeat</label>
-                                <div class="division">
-                    <select name="x_days" id="x_days">
-                        <option value="" label="Select days">Select days</option>
-                        <option value="1" label="1">1</option>
-                        <option value="2" label="2">2</option>
-                        <option value="3" label="3">3</option>
-                        <option value="4" label="4">4</option>
-                        <option value="5" label="5">5</option>
-                        <option value="6" label="6">6</option>
-                        <option value="7" label="7">7</option>
-                        <option value="8" label="8">8</option>
-                        <option value="9" label="9">9</option>
-                        <option value="10" label="10">10</option>
-                        <option value="11" label="11">11</option>
-                        <option value="12" label="12">12</option>
-                        <option value="13" label="13">13</option>
-                        <option value="14" label="14">14</option>
-                        <option value="15" label="15">15</option>
-                        <option value="16" label="16">16</option>
-                        <option value="17" label="17">17</option>
-                        <option value="18" label="18">18</option>
-                        <option value="19" label="19">19</option>
-                        <option value="20" label="20">20</option>
-                        <option value="21" label="21">21</option>
-                        <option value="22" label="22">22</option>
-                        <option value="23" label="23">23</option>
-                        <option value="24" label="24">24</option>
-                        <option value="25" label="25">25</option>
-                        <option value="26" label="26">26</option>
-                        <option value="27" label="27">27</option>
-                        <option value="28" label="28">28</option>
-                        <option value="29" label="29">29</option>
-                        <option value="30" label="30">30</option>
-                    </select></div>
-                                            </div>
-                    
-                    
-                                <div class="new-form-ui"  id="weeks" style="display:none">
-                                  <label class="required">No.of weeks to repeat</label>
-                                <div class="division">
-                    <select name="x_weeks" id="x_weeks" style="height: 28px; width: 200px;">
-                        <option value="" label="Select weeks">Select weeks</option>
-                        <option value="1" label="1">1</option>
-                        <option value="2" label="2">2</option>
-                        <option value="3" label="3">3</option>
-                        <option value="4" label="4">4</option>
-                        <option value="5" label="5">5</option>
-                        <option value="6" label="6">6</option>
-                    </select></div>
-                                            </div>
-                    
-                    
-                    
-                                <div class="new-form-ui"  id="months" style="display:none">
-                                  <label class="required">No.of months to repeat</label>
-                                <div class="division">
-                    <select name="x_months" id="x_months">
-                        <option value="" label="Select months">Select months</option>
-                        <option value="1" label="1">1</option>
-                        <option value="2" label="2">2</option>
-                        <option value="3" label="3">3</option>
-                        <option value="4" label="4">4</option>
-                        <option value="5" label="5">5</option>
-                        <option value="6" label="6">6</option>
-                    </select></div>
-                                            </div>
-                    
-                                <div class="new-form-ui">
-                                  <label >Attendees</label>
-                                <div class="division">
-                                    <select name="select" id="select" style="height: 28px; width: 200px;">
-                                        <option value="" label="Select ">Select</option>
-                       
-                    </select></div>
-                                            </div>
-                                
-                                
-                    
-                                
-                    <!-- 			<div class="new-form-ui" >
-                                      <label class="required">Status</label>
-                                    <div class="division"></div>
-                                                       <span class="errors" id="errors-"><?php// echo $this->msgarray['book_status'];?></span>
-                                                </div>	 -->
+                        <div class="total-form-controller">
+                              
+                            <div class="new-form-ui">
+                              <label class="required">Conference Room</label>
+                            <div class="division">
+                <select class="selectoption" name="conferenceRoom" ngModel id="conferenceRoom" >
+                    <option *ngFor="let e of result" value="{{e.crName}}" label="{{e.crName}}">{{e.crName}}</option>
+                    <!-- <option value="1" label="Lotus">Lotus</option>
+                    <option value="2" label="Lavender">Lavender</option>
+                    <option value="3" label="Irish">Irish</option>
+                    <option value="4" label="Rose">Rose</option>
+                    <option value="5" label="Tulip">Tulip</option>
+                    <option value="6" label="Daisy">Daisy</option>
+                    <option value="7" label="Daffodil">Daffodil</option> -->
+                </select></div>
+                                        </div>
+                            
+                            <div class="new-form-ui"  id="begin">
+                              <label class="required">Begin</label>
+                            <div class="division">
+                <input type="datetime-local" name="begin" ngModel id="begin" ></div>
+                                        </div>
+                
+                            <input type="hidden" name="hid_begin_time_error" id="hid_begin_time_error" value="">
+                            <input type="hidden" name="hid_end_time_error" id="hid_end_time_error" value="">
+                
+                            <div class="new-form-ui"  id="end">
+                              <label class="required">End</label>
+                            <div class="division">
+                <input type="datetime-local" name="end" ngModel id="end" value=""></div>
+                                        </div>
+                            
+                            <div class="new-form-ui">
+                              <label class="required">Repeat</label>
+                            <div class="division">
+                <select class="selectoption" name="repeatBooking" ngModel id="repeatBooking" >
+                    <option *ngFor="let e of result2" value="{{e.crRepeat}}" label="{{e.crRepeat}}">{{e.crRepeat}}</option>
+                    <!-- <option value="Does not repeat" label="Does not repeat">Does not repeat</option>
+                    <option value="Daily" label="Daily">Daily</option>
+                    <option value="Weekly" label="Weekly">Weekly</option>
+                    <option value="Monthly" label="Monthly">Monthly</option> -->
+                </select></div>
+                                        </div>
+                
+                
+                            
+          
+                
+                            <div class="new-form-ui">
+                              <label >Attendees</label>
+                            <div class="division">
+                                <select class="selectoption" name="attendees" ngModel id="attendees" >
+                                    <option *ngFor="let e of result1" value="{{e.crAttendees}}" label="{{e.crAttendees}} ">{{e.crAttendees}}</option>
+                                </select></div>
                             </div>
-                            
-                            <div class="new-form-ui-submit">
-                            
-                    <input type="submit" name="submit" id="submitbutton" value="Save" >	
-                            <button name="Canceldialog" id="Canceldialog" onclick="closedialog('cancel');" type="button">Cancel</button>
-                            </div>
-                            
-                    </form>
+                
+                
+    
+                
+    <!--    <div class="new-form-ui" >
+                      <label class="required">Status</label>
+                    <div class="division"></div>
+                                       <span class="errors" id="errors-"><?php// echo $this->msgarray['book_status'];?></span>
+                                </div>  -->
+            </div>
+            
+            <div class="new-form-ui-submit">
+            
+    <input type="submit" name="submit" id="submitbutton" value="Save" (click)="addBooking(userPost.value)" > 
+            <button name="Canceldialog" id="Canceldialog" onclick="closedialog('cancel');" type="button">Cancel</button>
+            </div>
+            
+    </form>
                     </div>
                     </div>
 

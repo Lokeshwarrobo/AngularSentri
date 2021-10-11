@@ -218,9 +218,18 @@
                         
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                   <td colspan='14' class='no-data-td'><p class='no-data'>No data Found.</p></td></tr>
+                <tbody *ngFor="let e of depa"> 
+                    <tr> 
+                        <td width=90> 
+                            {{e.name}} 
+
+                        </td> 
+                        <td>{{e.code}}</td> 
+                        <td>{{e.startedon}}</td> 
+                        <td>{{e.departmenthead}}</td> 
+                        <td>{{e.timezone}}</td> 
+                        <td>{{e.businessunit}}</td> 
+                    </tr> 
                 </tbody>
             </table>
             </div>
